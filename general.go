@@ -1,3 +1,6 @@
+func ShoppingSummaryCounter(str string) map[string]int {
+
+    
 Initialize an empty map called summary
 Initialize an empty string called currentItem
 
@@ -11,3 +14,6 @@ For each character in the string:
 After the loop:
     If currentItem is not empty:
         Increase summary[currentItem] by 1
+
+
+}

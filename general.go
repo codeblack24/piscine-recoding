@@ -1,7 +1,7 @@
 func ShoppingSummaryCounter(str string) map[string]int {
 
     
-Initialize an empty map called summary
+summary := make(map[string]int)
 Initialize an empty string called currentItem
 
 For each character in the string:
@@ -17,3 +17,4 @@ After the loop:
 
 
 }
+

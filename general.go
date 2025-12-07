@@ -1,30 +1,27 @@
-FUNCTION DealAPackOfCards(deck):
+package piscine
 
-    There are 12 cards in the deck
-    There are 4 players
-    Each player should receive 3 cards
+import (
+	"fmt"
 
-    FOR player number from 1 to 4:
+	"github.com/01-edu/z01"
+)
 
-        Print "Player X: " (where X is the player number)
+func DealAPackOfCards(deck []int) {
+	for player := 0; player <= 4; player++ {
+		fmt.Printf("Player: ", player)
 
-        Find the first card for this player:
-            start = (player number - 1) * 3
+		start := player * 4
+		end := start + 2
 
-        Find the last card for this player:
-            end = start + 3
+		for i := start; i <= end; i++ {
+			if i == end+1 {
+				fmt.Printf("%d", deck[i])
+			} else {
+				fmt.Printf("%d, ", deck[start])
+			}
+		}
 
-        FOR every card index from start to end - 1:
-
-            IF this is the last card for the player:
-                Print the card without a comma
-            ELSE:
-                Print the card followed by a comma and space
-
-        END FOR
-
-        Print a new line
-
-    END FOR
-
-END FUNCTION
+		z01.PrintRune('\n')
+		z01.PrintRune('\n')
+	}
+}

@@ -1,21 +1,15 @@
-func ShoppingSummaryCounter(str string) map[string]int {
+FUNCTION Compact(list):
 
-    
-summary := make(map[string]int)
-currentItem := ""
+    count = 0
 
-For each character in the string:
-    If the character is a space:
-        Increase summary[currentItem] by 1
-        Reset currentItem to empty string
-    Else:
-        Add the character to currentItem
+    FOR each item in the list:
+        IF item is NOT empty:
+            put item at position count
+            count = count + 1
+        END IF
+    END FOR
 
-After the loop:
-    If currentItem is not empty:
-        Increase summary[currentItem] by 1
+    cut the list so it keeps only the first 'count' items
 
-
-}
-
-
+    RETURN count
+END FUNCTION

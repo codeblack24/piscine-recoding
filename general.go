@@ -2,7 +2,7 @@ func ShoppingSummaryCounter(str string) map[string]int {
 
     
 summary := make(map[string]int)
-Initialize an empty string called currentItem
+currentItem := ""
 
 For each character in the string:
     If the character is a space:
@@ -17,4 +17,5 @@ After the loop:
 
 
 }
+
 

@@ -1,15 +1,12 @@
-FUNCTION JumpOver(str):
+FUNCTION StringToIntSlice(str):
 
-    IF length of str < 3 THEN
-        RETURN newline ("\n")
-    END IF
+    Create an empty list called result
 
-    result ← empty string
-
-    FOR i from 2 to length of str - 1, step 3 DO
-        result ← result + str[i]
+    FOR each character r in str DO
+        Convert r to its integer value
+        Append this integer to result
     END FOR
 
-    RETURN result + newline ("\n")
+    RETURN result
 
 END FUNCTION

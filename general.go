@@ -1,24 +1,30 @@
-FUNCTION Compact(pointer to list):
+FUNCTION DealAPackOfCards(deck):
 
-    Let s be the list we got from the pointer
+    There are 12 cards in the deck
+    There are 4 players
+    Each player should receive 3 cards
 
-    Start a counter at 0
+    FOR player number from 1 to 4:
 
-    FOR each position i in the list:
-        IF the item at position i is NOT an empty string:
-            
-            Move this item to the front of the list
-            Specifically, put it at position equal to the counter
+        Print "Player X: " (where X is the player number)
 
-            Increase the counter by 1
+        Find the first card for this player:
+            start = (player number - 1) * 3
 
-        END IF
+        Find the last card for this player:
+            end = start + 3
+
+        FOR every card index from start to end - 1:
+
+            IF this is the last card for the player:
+                Print the card without a comma
+            ELSE:
+                Print the card followed by a comma and space
+
+        END FOR
+
+        Print a new line
+
     END FOR
 
-    Now remove everything after the counter position
-    (this cuts off all empty strings at the end)
-
-    Update the pointer so it points to this shorter list
-
-    RETURN the counter (the number of non-empty items)
 END FUNCTION
